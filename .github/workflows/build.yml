@@ -13,7 +13,7 @@ jobs:
       BUILD_TYPE: Release
     steps:
     - name: Checkout Repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Compile with gcc 10 on ubuntu
       if: ${{ matrix.os == 'ubuntu-20.04' }}
       run: |
