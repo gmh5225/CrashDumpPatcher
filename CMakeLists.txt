@@ -37,6 +37,10 @@ add_executable(CrashDumpPatcher)
 target_sources(CrashDumpPatcher PRIVATE ${CrashDumpPatcher_SOURCES})
 source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${CrashDumpPatcher_SOURCES})
 
+target_compile_features(CrashDumpPatcher PRIVATE
+	cxx_std_20
+)
+
 get_directory_property(CMKR_VS_STARTUP_PROJECT DIRECTORY ${PROJECT_SOURCE_DIR} DEFINITION VS_STARTUP_PROJECT)
 if(NOT CMKR_VS_STARTUP_PROJECT)
 	set_property(DIRECTORY ${PROJECT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT CrashDumpPatcher)
