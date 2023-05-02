@@ -23,3 +23,9 @@ jobs:
       run: |
         cmake -B build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
         cmake --build build --config ${{ env.BUILD_TYPE }} --parallel
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: CrashDumpPatcher -${{ matrix.os }}
+        path: build/Release
