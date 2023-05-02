@@ -27,5 +27,5 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: CrashDumpPatcher -${{ matrix.os }}
+        name: CrashDumpPatcher-${{ matrix.os }}
         path: build/Release
