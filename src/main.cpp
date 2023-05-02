@@ -30,6 +30,7 @@ public:
     DumpPatcher(const wchar_t *dmp_file_name, const wchar_t *exe_file_name) :
         dmp_file_name(dmp_file_name), exe_file_name(exe_file_name)
     {
+        memset(&file_info, 0, sizeof(file_info));
     }
 
     int get_file_info()
